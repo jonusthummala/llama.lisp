@@ -6,13 +6,13 @@
         (containers
             (container
                 (name "ollama")
-                (image "docker.io/ollama/ollama:0.9.0")
+                (image "docker.io/ollama/ollama:0.11.10")
                 (volumes
                     ("models" "/root/.ollama"))
                 (additional-flags "--device nvidia.com/gpu=all"))
             (container
                 (name "open-webui")
-                (image "ghcr.io/open-webui/open-webui:0.6.2-cuda")
+                (image "ghcr.io/open-webui/open-webui:0.6.2")
                 (additional-flags "--device nvidia.com/gpu=all")
                 (volumes
                     ("open-webui-data" "/app/backend/data"))
